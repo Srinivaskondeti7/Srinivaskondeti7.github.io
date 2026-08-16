@@ -6,558 +6,1928 @@
 
   <title>Srinivas Kondeti | Computer System Validation</title>
 
+  <meta name="description"
+        content="Srinivas Kondeti - Computer System Validation and CSV/CSA professional with 8+ years of experience in regulated pharmaceutical and life sciences environments.">
+
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+
+    :root {
+      --navy: #081528;
+      --navy2: #102848;
+      --blue: #2563eb;
+      --blue-light: #dbeafe;
+      --cyan: #38bdf8;
+      --text: #172033;
+      --muted: #64748b;
+      --light: #f7f9fc;
+      --white: #ffffff;
+      --border: #e2e8f0;
     }
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f5f7fa;
-      color: #1f2937;
-      line-height: 1.6;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     html {
       scroll-behavior: smooth;
     }
 
-    nav {
-      background: #0f172a;
-      color: white;
-      padding: 18px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 100;
+    body {
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+      color: var(--text);
+      background: white;
+      line-height: 1.65;
     }
 
-    nav .logo {
-      font-size: 20px;
-      font-weight: bold;
-    }
-
-    nav a {
-      color: white;
+    a {
       text-decoration: none;
-      margin-left: 22px;
-      font-size: 14px;
     }
 
-    nav a:hover {
-      color: #60a5fa;
-    }
-
-    .hero {
-      background: linear-gradient(135deg, #0f172a, #1e3a8a);
-      color: white;
-      padding: 100px 8%;
-    }
-
-    .hero-content {
-      max-width: 900px;
-    }
-
-    .hero h1 {
-      font-size: 52px;
-      margin-bottom: 12px;
-    }
-
-    .hero h2 {
-      font-size: 25px;
-      font-weight: normal;
-      color: #bfdbfe;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      max-width: 760px;
-      font-size: 18px;
-      color: #e2e8f0;
-      margin-bottom: 30px;
-    }
-
-    .button {
-      display: inline-block;
-      background: #2563eb;
-      color: white;
-      padding: 12px 22px;
-      margin-right: 10px;
-      margin-bottom: 10px;
-      text-decoration: none;
-      border-radius: 7px;
-      font-weight: bold;
-    }
-
-    .button.secondary {
-      background: transparent;
-      border: 1px solid #93c5fd;
-    }
-
-    section {
-      padding: 70px 8%;
-      max-width: 1200px;
+    .container {
+      width: min(1160px, 90%);
       margin: auto;
     }
 
-    section h2 {
-      font-size: 32px;
-      margin-bottom: 25px;
+
+    /* ---------------- NAVIGATION ---------------- */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      background: rgba(8, 21, 40, 0.96);
+      backdrop-filter: blur(10px);
+
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .nav-inner {
+      height: 74px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      color: white;
+      font-weight: 750;
+      font-size: 20px;
+      letter-spacing: -0.3px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      color: #d7e1ee;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    .nav-resume {
+      border: 1px solid rgba(255,255,255,0.35);
+      padding: 9px 15px;
+      border-radius: 8px;
+    }
+
+
+    /* ---------------- HERO ---------------- */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+
+      background:
+        radial-gradient(circle at 80% 20%,
+        rgba(37,99,235,0.25),
+        transparent 28%),
+        linear-gradient(135deg, #081528 0%, #102848 100%);
+
+      color: white;
+
+      min-height: 680px;
+
+      display: flex;
+      align-items: center;
+    }
+
+    .hero::after {
+      content: "";
+
+      position: absolute;
+
+      width: 420px;
+      height: 420px;
+
+      border-radius: 50%;
+
+      right: -170px;
+      bottom: -190px;
+
+      background: rgba(56,189,248,0.08);
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 2;
+
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 80px;
+
+      align-items: center;
+
+      padding: 80px 0;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+
+      background: rgba(56,189,248,0.09);
+      border: 1px solid rgba(56,189,248,0.28);
+
+      padding: 7px 13px;
+      border-radius: 999px;
+
+      color: #bae6fd;
+
+      font-size: 13px;
+      font-weight: 600;
+
+      margin-bottom: 22px;
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+
+      border-radius: 50%;
+      background: #38bdf8;
+    }
+
+    .hero h1 {
+      font-size: clamp(44px, 6vw, 70px);
+      line-height: 1.05;
+      letter-spacing: -2px;
+
+      margin-bottom: 18px;
+    }
+
+    .hero-title {
+      color: #93c5fd;
+
+      font-size: 23px;
+      font-weight: 500;
+
+      margin-bottom: 22px;
+    }
+
+    .hero-description {
+      color: #cbd5e1;
+
+      max-width: 680px;
+
+      font-size: 17px;
+
+      margin-bottom: 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+
+      margin-bottom: 38px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 12px 20px;
+
+      border-radius: 8px;
+
+      font-size: 14px;
+      font-weight: 650;
+
+      transition: .2s ease;
+    }
+
+    .btn-primary {
+      background: #2563eb;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      color: white;
+
+      border: 1px solid rgba(255,255,255,0.32);
+
+      background: rgba(255,255,255,0.03);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.08);
+    }
+
+
+    /* HERO METRICS */
+
+    .hero-metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      gap: 16px;
+
+      max-width: 700px;
+    }
+
+    .metric {
+      border-left: 2px solid #2563eb;
+
+      padding-left: 14px;
+    }
+
+    .metric strong {
+      display: block;
+
+      color: white;
+
+      font-size: 22px;
+    }
+
+    .metric span {
+      color: #94a3b8;
+
+      font-size: 12px;
+    }
+
+
+    /* PHOTO */
+
+    .photo-wrapper {
+      position: relative;
+      max-width: 355px;
+      margin-left: auto;
+    }
+
+    .photo-card {
+      position: relative;
+
+      padding: 8px;
+
+      border-radius: 24px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,0.20),
+          rgba(255,255,255,0.03)
+        );
+
+      border: 1px solid rgba(255,255,255,0.14);
+
+      box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+    }
+
+    .photo-card img {
+      display: block;
+
+      width: 100%;
+      aspect-ratio: 4 / 5;
+
+      object-fit: cover;
+      object-position: top center;
+
+      border-radius: 18px;
+    }
+
+    .photo-label {
+      position: absolute;
+
+      left: -24px;
+      bottom: 30px;
+
+      background: white;
+
       color: #0f172a;
+
+      padding: 13px 18px;
+
+      border-radius: 10px;
+
+      box-shadow: 0 14px 40px rgba(0,0,0,0.22);
+
+      font-size: 13px;
     }
 
-    .summary {
+    .photo-label strong {
+      display: block;
+
+      font-size: 15px;
+
+      color: #1d4ed8;
+    }
+
+
+    /* ---------------- SECTIONS ---------------- */
+
+    section {
+      padding: 90px 0;
+    }
+
+    .alt {
+      background: var(--light);
+    }
+
+    .section-tag {
+      color: #2563eb;
+
+      text-transform: uppercase;
+
+      font-weight: 750;
+      font-size: 12px;
+
+      letter-spacing: 1.6px;
+
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      color: #0f172a;
+
+      font-size: 36px;
+
+      letter-spacing: -1px;
+
+      margin-bottom: 14px;
+    }
+
+    .section-intro {
+      max-width: 740px;
+
+      color: var(--muted);
+
+      font-size: 16px;
+
+      margin-bottom: 42px;
+    }
+
+
+    /* ---------------- ABOUT ---------------- */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+
+      gap: 60px;
+      align-items: start;
+    }
+
+    .about-text p {
+      color: #475569;
+
+      margin-bottom: 18px;
+
+      font-size: 16px;
+    }
+
+    .highlight-box {
+      background: #eff6ff;
+
+      border: 1px solid #dbeafe;
+      border-radius: 16px;
+
+      padding: 28px;
+    }
+
+    .highlight-box h3 {
       font-size: 18px;
-      max-width: 1000px;
+
+      margin-bottom: 18px;
     }
 
-    .skills {
+    .highlight-list {
+      display: grid;
+      gap: 13px;
+    }
+
+    .highlight {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+
+      font-size: 14px;
+
+      color: #334155;
+    }
+
+    .check {
+      width: 21px;
+      height: 21px;
+
+      min-width: 21px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      color: #2563eb;
+      background: white;
+
+      font-size: 11px;
+      font-weight: bold;
+    }
+
+
+    /* ---------------- SKILLS ---------------- */
+
+    .skills-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(auto-fit, minmax(240px, 1fr));
+
+      gap: 18px;
+    }
+
+    .skill-card {
+      padding: 25px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 14px;
+
+      background: white;
+
+      transition: .2s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-4px);
+
+      box-shadow: 0 15px 35px rgba(15,23,42,0.08);
+
+      border-color: #bfdbfe;
+    }
+
+    .skill-icon {
+      width: 42px;
+      height: 42px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 10px;
+
+      background: #eff6ff;
+
+      color: #2563eb;
+
+      margin-bottom: 16px;
+
+      font-weight: 800;
+    }
+
+    .skill-card h3 {
+      font-size: 17px;
+
+      margin-bottom: 8px;
+    }
+
+    .skill-card p {
+      color: var(--muted);
+
+      font-size: 14px;
+    }
+
+
+    /* ---------------- REGULATIONS ---------------- */
+
+    .tag-cloud {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
     }
 
-    .skill {
+    .tag {
+      padding: 10px 15px;
+
       background: white;
-      border: 1px solid #dbeafe;
-      padding: 10px 16px;
-      border-radius: 30px;
+
+      border: 1px solid #dbe3ed;
+
+      border-radius: 8px;
+
+      color: #334155;
+
+      font-size: 13px;
       font-weight: 600;
-      color: #1e40af;
     }
 
-    .cards {
+
+    /* ---------------- VALIDATION LIFECYCLE ---------------- */
+
+    .lifecycle {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 22px;
+      grid-template-columns: repeat(5, 1fr);
+
+      gap: 12px;
+
+      margin-top: 35px;
     }
 
-    .card {
+    .life-step {
+      position: relative;
+
       background: white;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 3px 15px rgba(0,0,0,0.07);
+
+      border: 1px solid var(--border);
+
+      border-radius: 13px;
+
+      padding: 23px 16px;
+
+      text-align: center;
     }
 
-    .card h3 {
-      margin-bottom: 10px;
-      color: #1d4ed8;
+    .step-number {
+      width: 32px;
+      height: 32px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background: #2563eb;
+
+      color: white;
+
+      font-size: 12px;
+      font-weight: bold;
+
+      margin-bottom: 11px;
     }
 
-    .card p {
+    .life-step strong {
+      display: block;
+
+      color: #0f172a;
+
+      font-size: 13px;
+    }
+
+
+    /* ---------------- EXPERIENCE ---------------- */
+
+    .timeline {
+      position: relative;
+
+      margin-top: 35px;
+    }
+
+    .timeline::before {
+      content: "";
+
+      position: absolute;
+
+      top: 0;
+      bottom: 0;
+      left: 16px;
+
+      width: 2px;
+
+      background: #dbeafe;
+    }
+
+    .timeline-item {
+      position: relative;
+
+      padding-left: 58px;
+
+      margin-bottom: 34px;
+    }
+
+    .timeline-dot {
+      position: absolute;
+
+      left: 7px;
+      top: 4px;
+
+      width: 20px;
+      height: 20px;
+
+      border-radius: 50%;
+
+      background: #2563eb;
+
+      border: 5px solid #dbeafe;
+    }
+
+    .timeline-card {
+      background: white;
+
+      border: 1px solid var(--border);
+
+      border-radius: 14px;
+
+      padding: 27px;
+
+      box-shadow: 0 7px 20px rgba(15,23,42,0.04);
+    }
+
+    .timeline-card h3 {
+      font-size: 20px;
+
+      margin-bottom: 4px;
+    }
+
+    .company {
+      color: #2563eb;
+
+      font-weight: 650;
+
+      margin-bottom: 15px;
+    }
+
+    .timeline-card ul {
+      padding-left: 20px;
+
+      color: #475569;
+    }
+
+    .timeline-card li {
       margin-bottom: 8px;
     }
 
-    .lifecycle {
-      background: #eff6ff;
-      border-radius: 12px;
-      padding: 35px;
-      text-align: center;
-      font-weight: bold;
-      font-size: 18px;
-      line-height: 2;
+
+    /* ---------------- SYSTEMS ---------------- */
+
+    .systems-grid {
+      display: grid;
+
+      grid-template-columns: repeat(4, 1fr);
+
+      gap: 18px;
     }
 
-    .experience-item {
+    .system {
+      background: #0f2744;
+
+      color: white;
+
+      min-height: 180px;
+
+      padding: 25px;
+
+      border-radius: 14px;
+    }
+
+    .system span {
+      color: #7dd3fc;
+
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .system h3 {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .system p {
+      color: #cbd5e1;
+
+      font-size: 13px;
+    }
+
+
+    /* ---------------- GLOBAL ---------------- */
+
+    .global-grid {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 20px;
+    }
+
+    .global-card {
+      border: 1px solid var(--border);
+
+      padding: 27px;
+
+      border-radius: 14px;
+
       background: white;
-      padding: 28px;
-      margin-bottom: 20px;
-      border-left: 5px solid #2563eb;
-      border-radius: 8px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.05);
     }
 
-    .experience-item h3 {
-      color: #0f172a;
-      margin-bottom: 5px;
-    }
+    .country {
+      font-size: 26px;
 
-    .experience-item h4 {
-      color: #2563eb;
       margin-bottom: 12px;
-      font-weight: normal;
     }
 
-    .experience-item ul {
-      padding-left: 20px;
+    .global-card h3 {
+      margin-bottom: 7px;
     }
+
+    .global-card p {
+      color: var(--muted);
+
+      font-size: 14px;
+    }
+
+
+    /* ---------------- CONTACT ---------------- */
+
+    .contact {
+      background:
+        linear-gradient(135deg, #081528, #102848);
+
+      color: white;
+    }
+
+    .contact-box {
+      display: grid;
+
+      grid-template-columns: 1fr auto;
+
+      gap: 50px;
+
+      align-items: center;
+    }
+
+    .contact h2 {
+      font-size: 36px;
+
+      margin-bottom: 12px;
+    }
+
+    .contact p {
+      color: #cbd5e1;
+
+      max-width: 700px;
+    }
+
+    .contact-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+
+    /* ---------------- FOOTER ---------------- */
 
     footer {
-      background: #0f172a;
-      color: #cbd5e1;
+      background: #050d18;
+
+      color: #94a3b8;
+
+      padding: 24px 0;
+
       text-align: center;
-      padding: 35px 20px;
+
+      font-size: 13px;
+    }
+
+
+    /* ---------------- RESPONSIVE ---------------- */
+
+    @media (max-width: 950px) {
+
+      .hero-grid,
+      .about-grid,
+      .contact-box {
+        grid-template-columns: 1fr;
+      }
+
+      .photo-wrapper {
+        margin: 20px auto 0;
+      }
+
+      .hero-metrics {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .systems-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .lifecycle {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .global-grid {
+        grid-template-columns: 1fr;
+      }
+
     }
 
     @media (max-width: 700px) {
 
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
+      .nav-links a:not(.nav-resume) {
+        display: none;
       }
 
-      nav div:last-child {
-        margin-top: 10px;
+      .hero {
+        min-height: auto;
       }
 
-      nav a {
-        margin-left: 0;
-        margin-right: 15px;
+      .hero-grid {
+        padding: 65px 0;
+        gap: 45px;
       }
 
       .hero h1 {
-        font-size: 38px;
+        font-size: 45px;
       }
 
-      .hero h2 {
-        font-size: 21px;
+      .hero-title {
+        font-size: 19px;
       }
+
+      .hero-metrics {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .systems-grid,
+      .lifecycle {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 70px 0;
+      }
+
+      .section-title {
+        font-size: 30px;
+      }
+
+      .photo-label {
+        left: 10px;
+      }
+
     }
+
   </style>
 </head>
 
+
 <body>
 
-  <nav>
-    <div class="logo">Srinivas Kondeti</div>
 
-    <div>
+<!-- ================= NAVIGATION ================= -->
+
+<nav>
+
+  <div class="container nav-inner">
+
+    <a class="brand" href="#">
+      Srinivas Kondeti
+    </a>
+
+    <div class="nav-links">
+
       <a href="#about">About</a>
-      <a href="#skills">Expertise</a>
+
+      <a href="#expertise">Expertise</a>
+
       <a href="#experience">Experience</a>
+
       <a href="#systems">Systems</a>
+
       <a href="#contact">Contact</a>
-    </div>
-  </nav>
 
-
-  <div class="hero">
-
-    <div class="hero-content">
-
-      <h1>Srinivas Kondeti</h1>
-
-      <h2>
-        Computer System Validation | CSV/CSA | Life Sciences
-      </h2>
-
-      <p>
-        Computer System Validation professional with 8+ years of experience
-        supporting software validation, implementation, quality systems and
-        production support within regulated pharmaceutical and life sciences
-        environments.
-      </p>
-
-      <a class="button" href="#experience">
-        View Experience
-      </a>
-
-      <a class="button secondary" href="#contact">
-        Contact Me
+      <a class="nav-resume" href="#contact">
+        Resume
       </a>
 
     </div>
 
   </div>
 
-
-  <section id="about">
-
-    <h2>Professional Profile</h2>
-
-    <p class="summary">
-
-      I bring more than eight years of professional experience in Computer
-      System Validation, software implementation and product support within
-      regulated pharmaceutical environments.
-
-      My experience includes supporting cross-functional teams and global
-      implementations across the United States, United Kingdom and Asia,
-      with a strong focus on regulatory compliance, validation lifecycle
-      activities, quality and stakeholder satisfaction.
-
-      I have supported computerized systems throughout implementation,
-      validation, deployment and production support phases.
-
-    </p>
-
-  </section>
+</nav>
 
 
-  <section id="skills">
 
-    <h2>Core Expertise</h2>
+<!-- ================= HERO ================= -->
 
-    <div class="skills">
+<header class="hero">
 
-      <div class="skill">Computer System Validation</div>
-      <div class="skill">Computer Software Assurance</div>
-      <div class="skill">GAMP 5</div>
-      <div class="skill">21 CFR Part 11</div>
-      <div class="skill">EU Annex 11</div>
-      <div class="skill">Validation Planning</div>
-      <div class="skill">User Requirements Specification</div>
-      <div class="skill">Functional Specification</div>
-      <div class="skill">Risk Assessment</div>
-      <div class="skill">IQ</div>
-      <div class="skill">OQ</div>
-      <div class="skill">PQ</div>
-      <div class="skill">UAT</div>
-      <div class="skill">SAT</div>
-      <div class="skill">Traceability Matrix</div>
-      <div class="skill">Deviation Management</div>
-      <div class="skill">Change Control</div>
-      <div class="skill">CAPA</div>
-      <div class="skill">Audit Readiness</div>
+  <div class="container hero-grid">
+
+
+    <div>
+
+      <div class="eyebrow">
+
+        <span class="dot"></span>
+
+        Computer System Validation • Life Sciences
+
+      </div>
+
+
+      <h1>
+        Srinivas Kondeti
+      </h1>
+
+
+      <div class="hero-title">
+
+        Senior Computer System Validation Professional
+
+      </div>
+
+
+      <p class="hero-description">
+
+        CSV / CSA professional with 8+ years of experience
+        delivering compliant computerized system implementations,
+        validation programs and production support within regulated
+        pharmaceutical and life sciences environments.
+
+      </p>
+
+
+      <div class="hero-actions">
+
+        <a href="#experience"
+           class="btn btn-primary">
+
+          View Experience
+
+        </a>
+
+        <a href="#contact"
+           class="btn btn-outline">
+
+          Contact Me
+
+        </a>
+
+      </div>
+
+
+      <div class="hero-metrics">
+
+        <div class="metric">
+
+          <strong>8+</strong>
+
+          <span>Years Experience</span>
+
+        </div>
+
+
+        <div class="metric">
+
+          <strong>35+</strong>
+
+          <span>Implementations</span>
+
+        </div>
+
+
+        <div class="metric">
+
+          <strong>Global</strong>
+
+          <span>US • UK • Asia</span>
+
+        </div>
+
+
+        <div class="metric">
+
+          <strong>GxP</strong>
+
+          <span>Regulated Systems</span>
+
+        </div>
+
+      </div>
 
     </div>
 
-  </section>
 
 
-  <section>
+    <div class="photo-wrapper">
 
-    <h2>Validation Lifecycle</h2>
+      <div class="photo-card">
+
+        <img
+          src="Profile.PNG"
+          alt="Srinivas Kondeti">
+
+      </div>
+
+
+      <div class="photo-label">
+
+        <strong>CSV / CSA</strong>
+
+        Life Sciences Professional
+
+      </div>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+  <div class="container">
+
+    <div class="section-tag">
+      Professional Profile
+    </div>
+
+    <h2 class="section-title">
+      Validation expertise built around quality and compliance.
+    </h2>
+
+
+    <div class="about-grid">
+
+
+      <div class="about-text">
+
+        <p>
+
+          I bring more than eight years of professional experience
+          in computer system validation, software implementation and
+          product support within regulated pharmaceutical environments.
+
+        </p>
+
+        <p>
+
+          My experience covers the computerized system lifecycle from
+          requirements and risk assessment through configuration,
+          validation testing, deployment and ongoing production support.
+
+        </p>
+
+        <p>
+
+          I have worked with global cross-functional teams across the
+          United States, United Kingdom and Asia, partnering with QA,
+          business users, technical teams and vendors to deliver
+          compliant and sustainable solutions.
+
+        </p>
+
+      </div>
+
+
+
+      <div class="highlight-box">
+
+        <h3>
+          Professional Highlights
+        </h3>
+
+        <div class="highlight-list">
+
+          <div class="highlight">
+
+            <span class="check">✓</span>
+
+            35+ computerized system implementation projects
+
+          </div>
+
+          <div class="highlight">
+
+            <span class="check">✓</span>
+
+            End-to-end CSV lifecycle experience
+
+          </div>
+
+          <div class="highlight">
+
+            <span class="check">✓</span>
+
+            GxP pharmaceutical and life sciences environments
+
+          </div>
+
+          <div class="highlight">
+
+            <span class="check">✓</span>
+
+            Global stakeholder and cross-functional team leadership
+
+          </div>
+
+          <div class="highlight">
+
+            <span class="check">✓</span>
+
+            Audit readiness, deviations, change control and CAPA
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ================= EXPERTISE ================= -->
+
+<section id="expertise" class="alt">
+
+  <div class="container">
+
+    <div class="section-tag">
+      Core Expertise
+    </div>
+
+    <h2 class="section-title">
+      Computer System Validation & Software Assurance
+    </h2>
+
+    <p class="section-intro">
+
+      Experience supporting risk-based validation and compliance
+      activities throughout implementation, testing, deployment
+      and ongoing system operation.
+
+    </p>
+
+
+    <div class="skills-grid">
+
+
+      <div class="skill-card">
+
+        <div class="skill-icon">
+          CSV
+        </div>
+
+        <h3>
+          Computer System Validation
+        </h3>
+
+        <p>
+          Validation planning, requirements, risk assessment,
+          testing, traceability and validation reporting.
+        </p>
+
+      </div>
+
+
+
+      <div class="skill-card">
+
+        <div class="skill-icon">
+          CSA
+        </div>
+
+        <h3>
+          Computer Software Assurance
+        </h3>
+
+        <p>
+          Risk-based assurance approaches focused on patient
+          safety, product quality and intended use.
+        </p>
+
+      </div>
+
+
+
+      <div class="skill-card">
+
+        <div class="skill-icon">
+          RA
+        </div>
+
+        <h3>
+          Risk-Based Validation
+        </h3>
+
+        <p>
+          Functional risk assessment, testing strategy,
+          mitigation and regression scope determination.
+        </p>
+
+      </div>
+
+
+
+      <div class="skill-card">
+
+        <div class="skill-icon">
+          QA
+        </div>
+
+        <h3>
+          Quality & Compliance
+        </h3>
+
+        <p>
+          Deviation management, CAPA, change control,
+          inspection readiness and audit support.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ================= REGULATORY ================= -->
+
+<section>
+
+  <div class="container">
+
+    <div class="section-tag">
+      Regulatory Knowledge
+    </div>
+
+    <h2 class="section-title">
+      Compliance Frameworks
+    </h2>
+
+    <p class="section-intro">
+
+      Practical experience supporting validation activities
+      in regulated pharmaceutical and life sciences environments.
+
+    </p>
+
+
+    <div class="tag-cloud">
+
+      <span class="tag">GAMP 5</span>
+
+      <span class="tag">21 CFR Part 11</span>
+
+      <span class="tag">EU Annex 11</span>
+
+      <span class="tag">GxP</span>
+
+      <span class="tag">CSV</span>
+
+      <span class="tag">CSA</span>
+
+      <span class="tag">Risk Assessment</span>
+
+      <span class="tag">Data Integrity</span>
+
+      <span class="tag">Electronic Signatures</span>
+
+      <span class="tag">Audit Trails</span>
+
+      <span class="tag">Change Control</span>
+
+      <span class="tag">CAPA</span>
+
+      <span class="tag">Deviation Management</span>
+
+      <span class="tag">Audit Readiness</span>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ================= LIFECYCLE ================= -->
+
+<section class="alt">
+
+  <div class="container">
+
+    <div class="section-tag">
+      Validation Lifecycle
+    </div>
+
+    <h2 class="section-title">
+      End-to-End CSV Lifecycle
+    </h2>
+
+    <p class="section-intro">
+
+      Experience supporting computerized systems from
+      validation planning through production release
+      and continued compliance.
+
+    </p>
+
 
     <div class="lifecycle">
 
-      Validation Planning
-      →
-      URS
-      →
-      Risk Assessment
-      →
-      Functional Specification
-      →
-      IQ
-      →
-      OQ
-      →
-      PQ / UAT
-      →
-      Traceability
-      →
-      Validation Summary Report
-      →
-      Go-Live
+
+      <div class="life-step">
+
+        <span class="step-number">
+          01
+        </span>
+
+        <strong>
+          Validation Plan
+        </strong>
+
+      </div>
+
+
+      <div class="life-step">
+
+        <span class="step-number">
+          02
+        </span>
+
+        <strong>
+          URS
+        </strong>
+
+      </div>
+
+
+      <div class="life-step">
+
+        <span class="step-number">
+          03
+        </span>
+
+        <strong>
+          Risk Assessment
+        </strong>
+
+      </div>
+
+
+      <div class="life-step">
+
+        <span class="step-number">
+          04
+        </span>
+
+        <strong>
+          FS / Configuration
+        </strong>
+
+      </div>
+
+
+      <div class="life-step">
+
+        <span class="step-number">
+          05
+        </span>
+
+        <strong>
+          IQ
+        </strong>
+
+      </div>
+
+
+      <div class="life-step">
+
+        <span class="step-number">
+          06
+        </span>
+
+        <strong>
+          OQ
+        </strong>
+
+      </div>
+
+
+      <div class="life-step">
+
+        <span class="step-number">
+          07
+        </span>
+
+        <strong>
+          PQ / UAT
+        </strong>
+
+      </div>
+
+
+      <div class="life-step">
+
+        <span class="step-number">
+          08
+        </span>
+
+        <strong>
+          Traceability
+        </strong>
+
+      </div>
+
+
+      <div class="life-step">
+
+        <span class="step-number">
+          09
+        </span>
+
+        <strong>
+          Validation Report
+        </strong>
+
+      </div>
+
+
+      <div class="life-step">
+
+        <span class="step-number">
+          10
+        </span>
+
+        <strong>
+          Go-Live
+        </strong>
+
+      </div>
 
     </div>
 
-  </section>
+  </div>
+
+</section>
 
 
-  <section id="systems">
 
-    <h2>Systems Experience</h2>
+<!-- ================= EXPERIENCE ================= -->
 
-    <div class="cards">
+<section id="experience">
 
-      <div class="card">
-        <h3>Quality Management Systems</h3>
-        <p>
-          Experience supporting electronic quality processes,
-          workflows, configuration, validation and production support.
-        </p>
+  <div class="container">
+
+    <div class="section-tag">
+      Career Journey
+    </div>
+
+    <h2 class="section-title">
+      Professional Experience
+    </h2>
+
+    <p class="section-intro">
+
+      Progressive experience across validation,
+      product consulting, implementation and
+      regulated software support.
+
+    </p>
+
+
+    <div class="timeline">
+
+
+      <div class="timeline-item">
+
+        <span class="timeline-dot"></span>
+
+        <div class="timeline-card">
+
+          <h3>
+            Senior Product Specialist
+          </h3>
+
+          <div class="company">
+            Caliber Technologies Pvt. Ltd.
+          </div>
+
+          <ul>
+
+            <li>
+              Led and supported computerized system implementations
+              within regulated pharmaceutical environments.
+            </li>
+
+            <li>
+              Coordinated with QA, business, technical and vendor teams
+              throughout validation and deployment.
+            </li>
+
+            <li>
+              Supported global projects across the United States,
+              United Kingdom and Asia.
+            </li>
+
+            <li>
+              Managed validation, configuration, UAT, SAT,
+              production deployment and post-go-live activities.
+            </li>
+
+          </ul>
+
+        </div>
+
       </div>
 
-      <div class="card">
-        <h3>Document Management Systems</h3>
-        <p>
-          Experience implementing and validating regulated document
-          management workflows and controlled documentation processes.
-        </p>
+
+
+      <div class="timeline-item">
+
+        <span class="timeline-dot"></span>
+
+        <div class="timeline-card">
+
+          <h3>
+            Product Consultant / Senior Product Consultant
+          </h3>
+
+          <div class="company">
+            Caliber Technologies Pvt. Ltd.
+          </div>
+
+          <ul>
+
+            <li>
+              Supported requirements gathering, system configuration,
+              validation testing and user training.
+            </li>
+
+            <li>
+              Prepared and executed IQ, OQ, PQ and UAT documentation.
+            </li>
+
+            <li>
+              Supported deviation investigation, change management
+              and production issues.
+            </li>
+
+          </ul>
+
+        </div>
+
       </div>
 
-      <div class="card">
-        <h3>Laboratory Information Management Systems</h3>
-        <p>
-          Experience supporting computerized laboratory systems within
-          regulated environments.
-        </p>
+
+
+      <div class="timeline-item">
+
+        <span class="timeline-dot"></span>
+
+        <div class="timeline-card">
+
+          <h3>
+            Validation Engineer
+          </h3>
+
+          <div class="company">
+            Caliber Technologies Pvt. Ltd.
+          </div>
+
+          <ul>
+
+            <li>
+              Prepared validation plans, URS, functional specifications,
+              risk assessments and traceability documentation.
+            </li>
+
+            <li>
+              Executed validation protocols and documented
+              validation evidence.
+            </li>
+
+            <li>
+              Supported compliant system implementation
+              and release activities.
+            </li>
+
+          </ul>
+
+        </div>
+
       </div>
 
-      <div class="card">
-        <h3>Training Management Systems</h3>
-        <p>
-          Experience supporting regulated employee training,
-          qualification and compliance processes.
-        </p>
-      </div>
 
     </div>
 
-  </section>
+  </div>
+
+</section>
 
 
-  <section id="experience">
 
-    <h2>Professional Experience</h2>
+<!-- ================= SYSTEMS ================= -->
 
-    <div class="experience-item">
+<section id="systems" class="alt">
 
-      <h3>Caliber Technologies Pvt. Ltd.</h3>
+  <div class="container">
 
-      <h4>
-        Validation Engineer → Product Consultant →
-        Senior Product Consultant → Senior Product Specialist
-      </h4>
+    <div class="section-tag">
+      Systems Experience
+    </div>
 
-      <ul>
+    <h2 class="section-title">
+      Regulated Enterprise Systems
+    </h2>
 
-        <li>
-          Supported end-to-end implementation and validation of
-          computerized systems used within pharmaceutical environments.
-        </li>
 
-        <li>
-          Participated in more than 35 system implementation projects.
-        </li>
+    <div class="systems-grid">
 
-        <li>
-          Prepared and executed validation documentation including
-          validation plans, URS, functional specifications, risk
-          assessments, IQ, OQ, PQ, traceability and validation reports.
-        </li>
 
-        <li>
-          Worked with QA, business users, technical teams and vendors
-          throughout system implementation and validation activities.
-        </li>
+      <div class="system">
 
-        <li>
-          Supported system configuration, UAT, SAT, validation,
-          production deployment and post-production activities.
-        </li>
+        <span>
+          eQMS
+        </span>
 
-        <li>
-          Supported deviation investigation, change control, CAPA and
-          audit readiness activities.
-        </li>
+        <h3>
+          Quality Management Systems
+        </h3>
 
-        <li>
-          Delivered projects across the United States, United Kingdom,
-          India and other international locations.
-        </li>
+        <p>
+          Quality workflows, CAPA, change control,
+          deviations and regulated processes.
+        </p>
 
-      </ul>
+      </div>
+
+
+
+      <div class="system">
+
+        <span>
+          EDMS
+        </span>
+
+        <h3>
+          Document Management Systems
+        </h3>
+
+        <p>
+          Controlled documents, review workflows,
+          approvals and document lifecycle management.
+        </p>
+
+      </div>
+
+
+
+      <div class="system">
+
+        <span>
+          LIMS
+        </span>
+
+        <h3>
+          Laboratory Information Management
+        </h3>
+
+        <p>
+          Computerized laboratory systems supporting
+          regulated quality environments.
+        </p>
+
+      </div>
+
+
+
+      <div class="system">
+
+        <span>
+          TMS
+        </span>
+
+        <h3>
+          Training Management Systems
+        </h3>
+
+        <p>
+          Employee training, qualification,
+          assignments and compliance tracking.
+        </p>
+
+      </div>
+
 
     </div>
 
+  </div>
 
-    <div class="experience-item">
+</section>
 
-      <h3>Global QMS Implementation</h3>
 
-      <h4>Selected Project Experience</h4>
 
-      <ul>
+<!-- ================= GLOBAL EXPERIENCE ================= -->
 
-        <li>
-          Supported end-to-end implementation and validation of an
-          enterprise Quality Management System.
-        </li>
+<section>
 
-        <li>
-          Participated in requirements gathering, risk assessment,
-          configuration, validation testing and deployment activities.
-        </li>
+  <div class="container">
 
-        <li>
-          Supported IQ, OQ, PQ, SAT and user acceptance testing.
-        </li>
-
-        <li>
-          Coordinated with QA, business stakeholders and technical teams
-          to resolve validation and configuration issues.
-        </li>
-
-        <li>
-          Supported harmonization of business workflows across multiple
-          sites.
-        </li>
-
-      </ul>
-
+    <div class="section-tag">
+      Global Experience
     </div>
 
-  </section>
+    <h2 class="section-title">
+      Working Across Global Teams
+    </h2>
 
 
-  <section>
+    <div class="global-grid">
 
-    <h2>Global Project Experience</h2>
 
-    <div class="cards">
+      <div class="global-card">
 
-      <div class="card">
-        <h3>United States</h3>
+        <div class="country">
+          🇺🇸
+        </div>
+
+        <h3>
+          United States
+        </h3>
+
         <p>
-          Regulated pharmaceutical system implementation,
-          validation and stakeholder support.
+          Pharmaceutical system implementation,
+          validation, production support and
+          stakeholder collaboration.
         </p>
+
       </div>
 
-      <div class="card">
-        <h3>United Kingdom</h3>
+
+
+      <div class="global-card">
+
+        <div class="country">
+          🇬🇧
+        </div>
+
+        <h3>
+          United Kingdom
+        </h3>
+
         <p>
-          On-site implementation, validation, testing,
-          training and stakeholder coordination.
+          On-site implementation, validation,
+          system testing, training and stakeholder
+          coordination.
         </p>
+
       </div>
 
-      <div class="card">
-        <h3>Asia & International</h3>
+
+
+      <div class="global-card">
+
+        <div class="country">
+          🌏
+        </div>
+
+        <h3>
+          Asia & International
+        </h3>
+
         <p>
-          Multi-site system implementation and regulated
+          Multi-site computerized system
+          implementations and regulated
           software deployment support.
         </p>
+
       </div>
+
 
     </div>
 
-  </section>
+  </div>
+
+</section>
 
 
-  <section id="contact">
 
-    <h2>Let's Connect</h2>
+<!-- ================= CONTACT ================= -->
 
-    <p class="summary" style="margin-bottom:25px;">
+<section id="contact" class="contact">
 
-      I am interested in opportunities involving Computer System Validation,
-      Computer Software Assurance, Quality Systems and regulated
-      computerized system implementation.
-
-    </p>
-
-    <!-- We will add your real links next -->
-
-    <a class="button" href="#">
-      LinkedIn
-    </a>
-
-    <a class="button" href="#">
-      Email
-    </a>
-
-    <a class="button" href="#">
-      Resume
-    </a>
-
-  </section>
+  <div class="container contact-box">
 
 
-  <footer>
+    <div>
 
-    <p>
-      © 2026 Srinivas Kondeti | Computer System Validation Professional
-    </p>
+      <div class="section-tag" style="color:#7dd3fc;">
+        Let's Connect
+      </div>
 
-  </footer>
+      <h2>
+        Interested in working together?
+      </h2>
+
+      <p>
+
+        I am interested in Computer System Validation,
+        Computer Software Assurance and regulated
+        computerized system opportunities within the
+        pharmaceutical and life sciences industries.
+
+      </p>
+
+    </div>
+
+
+    <div class="contact-actions">
+
+      <a class="btn btn-primary"
+         href="#">
+
+        LinkedIn
+
+      </a>
+
+      <a class="btn btn-outline"
+         href="#">
+
+        Email
+
+      </a>
+
+      <a class="btn btn-outline"
+         href="#">
+
+        Resume
+
+      </a>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+  <div class="container">
+
+    © 2026 Srinivas Kondeti
+    • Computer System Validation
+    • Life Sciences
+
+  </div>
+
+</footer>
+
 
 </body>
 </html>
